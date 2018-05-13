@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import getChatLog from './service';
 
 import './App.css';
+import ChatRoom from './components/Chat/ChatRoom'
 
 class App extends Component {
+  static propTypes = {
+    getChatLog: PropTypes.func
+  }
+  componentDidMount() {
+    const { getChatLog } = this.props
+    getChatLog()
+  }
   render() {
     return (
-      <h1>Hello!</h1>
+      <div>
+        <h1>Welcome to React.js chat room!</h1>
+        <ChatRoom />
+      </div>
     );
   }
 }
 
-const mapStateToProps = state => {
-  return {};
-};
-
-const mapDispatchToProps = dispatch => bindActionCreators({ getChatLog }, dispatch);
+const mapDispatchToProps = { getChatLog }
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(App);

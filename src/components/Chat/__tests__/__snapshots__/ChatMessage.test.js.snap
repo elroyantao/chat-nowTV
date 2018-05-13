@@ -1,0 +1,5 @@
+exports[`<ChatMessage/> @renders in default state 1`] = `
+<div>
+  Hi, this is a mocked message
+</div>
+`;

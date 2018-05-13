@@ -1,0 +1,8 @@
+exports[`<App /> @renders in default state 1`] = `
+<div>
+  <h1>
+    Welcome to React.js chat room!
+  </h1>
+  <Connect(ChatRoom) />
+</div>
+`;
