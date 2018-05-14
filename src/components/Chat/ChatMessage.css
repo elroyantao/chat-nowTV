@@ -1,0 +1,12 @@
+.ChatMessage {
+  display: flex;
+}
+
+.ChatMessage-avatar {
+  width: 100px;
+  height: 100px;
+}
+
+ChatMessage-message {
+  flex: 1;
+}

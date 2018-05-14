@@ -13,19 +13,23 @@ describe('<ChatMessage/>', () => {
     it('in default state', () => {
       const { wrapper, getTree } = renderComponent(initProps)
       expect(getTree()).toMatchSnapshot()
-      expect(wrapper.find('div').prop('title')).toBe(undefined)
+      expect(wrapper.find('.ChatMessage').prop('title')).toBe(undefined)
       
     })
     it('when user is defined', () => {
       const { wrapper, getTree } = renderComponent({
         ...initProps,
         user: { 
-          id: 234234,
-          email: 'el@gmail.com'
+          id: '0d9496c4-2490-40e6-a0c3-0964e371f1ab',
+          firstName: 'Henry',
+          lastName: 'Harrison',
+          email: 'hharrisonj@github.io',
+          avatar: 'http://dummyimage.com/100x100.bmp/cc0000/ffffff',
+          ip: '125.12.50.203'
         }
       })
       expect(getTree()).toMatchSnapshot()
-      expect(wrapper.find('div').prop('title')).toBe('el@gmail.com')
+      expect(wrapper.find('.ChatMessage').prop('title')).toBe('hharrisonj@github.io')
     })
   })
 })

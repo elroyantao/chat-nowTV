@@ -1,0 +1,20 @@
+exports[`<Avatar/> @renders in default state 1`] = `
+<div
+  className="Avatar">
+  <img
+    alt="Tom"
+    className="Avatar-image"
+    src="http://dummyimage.com/100x100.bmp/cc0000/ffffff" />
+</div>
+`;
+
+exports[`<Avatar/> @renders when no avatar 1`] = `
+<div
+  className="Avatar">
+  <img
+    alt="Tom"
+    className="Avatar-image" />
+</div>
+`;
+
+exports[`<Avatar/> @renders when no avatar and alt 1`] = `""`;

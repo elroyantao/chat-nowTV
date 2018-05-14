@@ -1,12 +1,30 @@
 exports[`<ChatMessage/> @renders in default state 1`] = `
-<div>
-  Hi, this is a mocked message
+<div
+  className="ChatMessage">
+  <div
+    className="ChatMessage-avatar">
+    <Avatar />
+  </div>
+  <div
+    className="ChatMessage-message">
+    Hi, this is a mocked message
+  </div>
 </div>
 `;
 
 exports[`<ChatMessage/> @renders when user is defined 1`] = `
 <div
-  title="el@gmail.com">
-  Hi, this is a mocked message
+  className="ChatMessage"
+  title="hharrisonj@github.io">
+  <div
+    className="ChatMessage-avatar">
+    <Avatar
+      alt="Henry"
+      avatar="http://dummyimage.com/100x100.bmp/cc0000/ffffff" />
+  </div>
+  <div
+    className="ChatMessage-message">
+    Hi, this is a mocked message
+  </div>
 </div>
 `;
