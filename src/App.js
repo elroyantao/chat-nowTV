@@ -2,18 +2,20 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 
-import getChatLog from './service';
+import { getChatLog, getUsersLog } from './service';
 
 import './App.css';
 import ChatRoom from './components/Chat/ChatRoom'
 
 class App extends Component {
   static propTypes = {
-    getChatLog: PropTypes.func
+    getChatLog: PropTypes.func,
+    getUsersLog: PropTypes.func
   }
   componentDidMount() {
-    const { getChatLog } = this.props
+    const { getChatLog, getUsersLog } = this.props
     getChatLog()
+    getUsersLog()
   }
   render() {
     return (
@@ -25,7 +27,7 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = { getChatLog }
+const mapDispatchToProps = { getChatLog, getUsersLog }
 
 export default connect(
   null,

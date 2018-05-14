@@ -1,16 +1,28 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
-export default class ChatMessage extends Component {
+class ChatMessage extends Component {
   static propTypes = {
-    message: PropTypes.object
+    message: PropTypes.object.isRequired,
+    user: PropTypes.object
   }
   render() {
-    const { message } = this.props
+    const { message, user = {} } = this.props
     return (
-      <div>
+      <div title={user.email}>
         {message.message}
       </div>
     )
   }
 }
+
+const mapStateToProps = (state, props) => {
+  return ({
+    user: state.users[props.message.userId]
+  })
+}
+export default connect(
+  mapStateToProps,
+  null
+)(ChatMessage)

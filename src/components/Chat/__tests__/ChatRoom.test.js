@@ -13,7 +13,7 @@ describe('<ChatRoom/>', () => {
       }
       const { wrapper, getTree } = renderComponent(props)
       expect(getTree()).toMatchSnapshot()
-      expect(wrapper.find('ChatMessage').length).toBe(3)
+      expect(wrapper.find('Connect(ChatMessage)').length).toBe(3)
     })
   })
 })

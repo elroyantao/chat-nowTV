@@ -2,21 +2,21 @@ exports[`<ChatRoom/> @renders in default state 1`] = `""`;
 
 exports[`<ChatRoom/> @renders when messages are defined 1`] = `
 <div>
-  <ChatMessage
+  <Connect(ChatMessage)
     key="123"
     message={
       Object {
         "id": 123,
       }
     } />
-  <ChatMessage
+  <Connect(ChatMessage)
     key="32425"
     message={
       Object {
         "id": 32425,
       }
     } />
-  <ChatMessage
+  <Connect(ChatMessage)
     key="923"
     message={
       Object {
