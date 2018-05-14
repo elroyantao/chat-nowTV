@@ -30,9 +30,13 @@ class ChatMessage extends Component {
   }
 }
 
+const userSelector = (state, props) => {
+  return state.users[props.message.userId]
+}
+
 const mapStateToProps = (state, props) => {
   return ({
-    user: state.users[props.message.userId]
+    user: userSelector(state, props)
   })
 }
 

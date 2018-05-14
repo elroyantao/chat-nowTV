@@ -12,7 +12,6 @@ export default class Time extends Component {
     const day = date.toLocaleString('en-GB',{
       hour12: true
     })
-    console.log(day)
     return (
       <div className="Time">
         {day}
