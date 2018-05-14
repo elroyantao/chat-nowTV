@@ -1,12 +1,17 @@
 .ChatMessage {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
 }
 
 .ChatMessage-avatar {
   width: 100px;
   height: 100px;
+  
 }
 
-ChatMessage-message {
+.ChatMessage-message {
   flex: 1;
+  margin: 0 10px;
 }

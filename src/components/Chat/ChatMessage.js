@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 
 import './ChatMessage.css';
 import Avatar from '../User/Avatar'
+import Time from './Time'
 
 class ChatMessage extends Component {
   static propTypes = {
@@ -21,6 +22,9 @@ class ChatMessage extends Component {
           />
         </div>
         <div className="ChatMessage-message">{message.message}</div>
+        <div className="ChatMessage-time">
+          <Time timestamp={message.timestamp}/>
+        </div>
       </div>
     )
   }

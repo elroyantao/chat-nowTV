@@ -6,7 +6,8 @@ describe('<ChatMessage/>', () => {
   const initProps = {
     message: {
       id: 2348,
-      message: 'Hi, this is a mocked message'
+      message: 'Hi, this is a mocked message',
+      timestamp: '2016-11-24T15:49:20Z'
     }
   }
   describe('@renders', () => {

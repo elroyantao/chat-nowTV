@@ -1,0 +1,6 @@
+exports[`<Time/> @renders in default state 1`] = `
+<div
+  className="Time">
+  11/24/2016, 3:49:20 PM
+</div>
+`;

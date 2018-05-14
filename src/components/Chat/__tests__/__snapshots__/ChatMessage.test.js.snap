@@ -9,6 +9,11 @@ exports[`<ChatMessage/> @renders in default state 1`] = `
     className="ChatMessage-message">
     Hi, this is a mocked message
   </div>
+  <div
+    className="ChatMessage-time">
+    <Time
+      timestamp="2016-11-24T15:49:20Z" />
+  </div>
 </div>
 `;
 
@@ -25,6 +30,11 @@ exports[`<ChatMessage/> @renders when user is defined 1`] = `
   <div
     className="ChatMessage-message">
     Hi, this is a mocked message
+  </div>
+  <div
+    className="ChatMessage-time">
+    <Time
+      timestamp="2016-11-24T15:49:20Z" />
   </div>
 </div>
 `;
